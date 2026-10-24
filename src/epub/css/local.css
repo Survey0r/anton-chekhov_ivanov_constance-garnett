@@ -26,8 +26,7 @@
 }
 /* End Dramatis Personae styles */
 
-[epub|type~="z3998:drama"] table,
-table[epub|type~="z3998:drama"]{
+[epub|type~="z3998:drama"] table{
 	border-collapse: collapse;
 	margin: 1em auto;
 	width: 100%;
@@ -66,7 +65,6 @@ table[epub|type~="z3998:drama"]{
 }
 
 [epub|type~="z3998:stage-direction"] [epub|type~="z3998:persona"],
-em [epub|type~="z3998:persona"],
 i [epub|type~="z3998:persona"]{
 	font-style: normal;
 }
@@ -105,18 +103,6 @@ section[epub|type~="z3998:scene"] > p{
 		margin-top: 1.5em;
 	}
 
-	/* `together` rows get a pseudo-stage-direction. */
-	[epub|type~="z3998:drama"] tr.together td[epub|type~="z3998:persona"]::after{
-		content: " (Together.)";
-		font-style: italic;
-		font-variant: normal;
-	}
-
-	[epub|type~="z3998:drama"] .together td:last-child{
-		border: none;
-		padding: 0;
-	}
-
 	/* Rows that are only stage direction get a top margin. */
 	[epub|type~="z3998:drama"] td:first-child:not([epub|type]) + td{
 		margin-top: 1.5em;
@@ -127,10 +113,6 @@ section[epub|type~="z3998:scene"] > p{
 [epub|type~="z3998:song"] p{
 	text-align: initial;
 	text-indent: 0;
-}
-
-[epub|type~="z3998:song"] p + p{
-	margin-top: 1em;
 }
 
 [epub|type~="z3998:song"] p > span{
